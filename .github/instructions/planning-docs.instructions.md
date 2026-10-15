@@ -1,0 +1,33 @@
+---
+applyTo: "docs/specs/**/*.md,docs/adr/**/*.md,docs/plans/**/*.md"
+description: "Conventions for files under docs/specs, docs/adr and docs/plans."
+---
+
+# Planning documents
+
+Applies to files under `docs/specs/`, `docs/adr/` and `docs/plans/`.
+
+## Specs
+
+- Sections in order: Problem, Goals, Non-goals, Users, Requirements, Acceptance criteria,
+  Constraints, Risks, Open questions.
+- Number requirements (R1, R2, ...) and acceptance criteria (A1, A2, ...) so tasks can cite them.
+- Write requirements as what the system must do, never as how the code should be structured.
+- Add a status line at the top: Draft, Approved or Superseded, with the date.
+
+## ADRs
+
+- File name is `NNNN-short-title.md`, numbered in order, never renumbered.
+- Sections: Context, Options considered, Decision, Consequences.
+- Never edit an accepted ADR to change the decision. Write a new one that supersedes it and
+  mark the old one Superseded with a link.
+
+## Plans
+
+- One plan per spec; name it after the spec.
+- Each task cites the requirement or acceptance criterion it serves.
+
+## All planning files
+
+- Plain Markdown, no HTML, short paragraphs, lists where items are parallel.
+- No secrets, tokens, credentials or personal data.
